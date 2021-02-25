@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://wwww.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Task Page</title>
+</head>
+<body>
+<form action="#" th:action = "@{'/add/'+ ${email}}" th:object="${task}" method="post">
+    <table border="1" cellpadding="10">
+        <tr>
+            <td>Task Id</td>
+            <td><input type="number" th:field="*{id}" readonly></td>
+        </tr>
+        <tr>
+            <td>Task Name</td>
+            <td><input type="text" th:field="*{name}" readonly></td>
+        </tr>
+        <tr>
+            <td>Task Date</td>
+            <td><input type="text" th:field="*{date}" readonly></td>
+        </tr>
+        <tr>
+            <td>Task Description</td>
+            <td><input type="text" th:field="*{description}" readonly></td>
+        </tr>
+        <tr>
+            <td>Task Status</td>
+            <td><input type="text" th:field="*{task_status}"></td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Save">
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://wwww.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Register Page</title>
+</head>
+<body>
+    <h1>Register Form</h1>
+
+    <form action="#" th:action = "@{/index}" th:object="${user}" method="post">
+        <table border="1" cellpadding="10">
+            <tr>
+                <td>Email</td>
+                <td><input type="text" th:field="*{email}" required></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" th:field="*{password}" required></td>
+            </tr>
+            <tr>
+                <td>Department</td>
+                <td><input type="text" th:field="*{department}" required></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Save">
+                </td>
+            </tr>
+        </table>
+        <a href="/login">I am already registered</a>
+        <br>
+        <a href="/admin">If you are a admin</a>
+    </form>
+
+</body>
+</html>

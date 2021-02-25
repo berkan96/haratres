@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://wwww.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Task Page</title>
+</head>
+<body>
+<form action="#" th:action = "@{'/add/'+ ${email}}" th:object="${task}" method="post">
+    <table border="1" cellpadding="10">
+        <tr>
+            <td>Task Name</td>
+            <td><input type="text" th:field="*{name}" required></td>
+        </tr>
+        <tr>
+            <td>Task Date</td>
+            <td><input type="text" th:field="*{date}" required></td>
+        </tr>
+        <tr>
+            <td>Task Description</td>
+            <td><input type="text" th:field="*{description}" required></td>
+        </tr>
+        <tr>
+            <td>Task Status</td>
+            <td><input type="text" th:field="*{task_status}" required></td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Save">
+            </td>
+        </tr>
+    </table>
+    <a href="/login">I am already registered</a>
+</form>
+</body>
+</html>
